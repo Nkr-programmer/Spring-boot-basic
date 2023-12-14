@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <span th:style="${status.odd?'font-weight:bold':'font-weight:italic;color:red'}" th:text="${n}"></span> -->
+    <h1>use is <span th:style="${isActive}?'color:green':'color:red'" th:text="${isActive}?'Active':'Not Active'"></span></h1><!-- 1 elvis way-->
+    <h1 th:if="${gender}=='F'">HE IS A MALE</h1>
+    <h1 th:unless="${gender}=='F'">SHE IS A FEMALE</h1><!-- 2 IF UNLESS -->
+    <div th:switch="${#lists.size(mylist)}">
+            <h1 th:case="'0'">list is having no element</h1>
+            <h1 th:case="'1'">list is having 1 element</h1>
+            <h1 th:case="*">list is having other than 0&1 element</h1><!-- 3 switch case -->
+    </div>
+</body>
+</html>

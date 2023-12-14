@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Here is my work</h1>
+    <h1>its about section. Hows it</h1>
+    <h1 th:text="${name}"></h1><!--1 -->
+     <h2>name=<span th:text="${date}"></span></h2><!--2 -->
+    <h1 th:text="${ #strings.toUpperCase(name)}"></h1><!--3 -->
+    <div th:with="a=5,b=6, n=${name}">
+        <h1 th:text="'this is my'+${a}+'and'+${b}+'is'+${a+b}"></h1><!--4 concatenation -->
+    </div>
+</body>
+</html>
